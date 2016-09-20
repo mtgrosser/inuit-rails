@@ -1,48 +1,41 @@
-inuit-rails
-===========
+# Inuit::Rails
 
-An attempt to get inuit css framework to play nicely with rails.
+Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/inuit/rails`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-It is strategy #2 in this useful blog post: http://www.codefellows.org/blog/five-ways-to-manage-front-end-assets-in-rails
+TODO: Delete this and the text above, and describe your gem
 
-Of all the options, I wanted to have a way of keeping control over how and when I update the framework, whilst keeping bower out of my main rails app. This is the compromise that I came up with.
+## Installation
 
-Using inuit-rails
------------------
+Add this line to your application's Gemfile:
 
-I've tried to bring in pretty much all of the components on the inuit github page https://github.com/inuitcss; but the whole point of it is that you only bring in the parts that you need.
-
-Therefore on the Rails side, create a sass/scss file somewhere in your app/assets/stylesheets folder, which does the importing of just the modules you need. E.g.
-
-```
-  @import "inuit-defaults/settings.defaults";
-
-  @import "inuit-functions/tools.functions";
-  @import "inuit-mixins/tools.mixins";
-
-  @import "inuit-normalize/generic.normalize";
-  @import "inuit-box-sizing/generic.box-sizing";
-
-  @import "inuit-page/base.page";
-  @import "inuit-headings/base.headings";
-
-  // Objects would go next...
+```ruby
+gem 'inuit-rails'
 ```
 
-I couldn't really get this to play nicely with the extensive use of variables, unless I import the stylesheets from the main app. To set a button colour for instance, you can add a variable before the part of the framework that you are importing, e.g.
+And then execute:
 
-```
-  $inuit-btn-background: #09992a;
-  @import "inuit-buttons/objects.buttons";
-```
+    $ bundle
 
-Contributing to inuit-rails
----------------------------
+Or install it yourself as:
 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
-* Fork the project.
-* Start a feature/bugfix branch.
-* Commit and push until you are happy with your contribution.
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+    $ gem install inuit-rails
+
+## Usage
+
+TODO: Write usage instructions here
+
+## Development
+
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/inuit-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
