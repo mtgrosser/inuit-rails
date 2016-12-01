@@ -22,6 +22,10 @@ Or install it yourself as:
 
 ## Usage
 
+Generate the style guide using the following command:
+
+    $ rails g inuit_rails:install
+
 TODO: Write usage instructions here
 
 ## Development
