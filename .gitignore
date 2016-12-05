@@ -54,3 +54,6 @@ vendor/assets/stylesheets/**/*.gitignore
 vendor/assets/stylesheets/**/*.bower.json
 
 Gemfile.lock
+
+# For ctags
+tags
