@@ -6,8 +6,8 @@ require 'inuit-rails/rails/version'
 Gem::Specification.new do |spec|
   spec.name          = "inuit-rails"
   spec.version       = Inuit::Rails::VERSION
-  spec.authors       = ["Dan Garland"]
-  spec.email         = ["dan@dangarland.co.uk"]
+  spec.authors       = ["Dan Garland", "Finn Francis"]
+  spec.email         = ["dan@dangarland.co.uk", "finn_francis@yahoo.com"]
 
   spec.summary       = %q{A Rails engine that permits the use of the inuit css framework within a Rails application.}
   spec.homepage      = "https://github.com/dmgarland/inuit-rails"
