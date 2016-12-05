@@ -5,7 +5,7 @@ module InuitRails
     desc "Generate a scss file to import the inuit styles"
 
     def copy_install_file
-      copy_file('example.main.scss', "app/assets/stylesheets/inuit_styles.scss")
+      copy_file('example.main.scss', "app/assets/stylesheets/inuit.main.scss")
     end
   end
 end
