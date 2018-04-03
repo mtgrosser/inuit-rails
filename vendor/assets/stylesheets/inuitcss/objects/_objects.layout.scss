@@ -59,7 +59,7 @@ $inuit-use-markup-fix: false !default;
 
 
 
-/* Default/mandatory classes.
+/* Default/mandatory classes
    ========================================================================== */
 
 /**
@@ -81,7 +81,6 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
-
 
   /**
    * 1. Required in order to combine fluid widths with fixed gutters.
@@ -113,8 +112,18 @@ $inuit-use-markup-fix: false !default;
 
 
 
-/* Gutter size modifiers.
+/* Gutter size modifiers
    ========================================================================== */
+
+.o-layout--flush {
+  margin-left: 0;
+
+  > .o-layout__item {
+    padding-left: 0;
+  }
+
+}
+
 
 .o-layout--tiny {
   margin-left: -$inuit-global-spacing-unit-tiny;
@@ -156,20 +165,10 @@ $inuit-use-markup-fix: false !default;
 }
 
 
-.o-layout--flush {
-  margin-left: 0;
-
-  > .o-layout__item {
-    padding-left: 0;
-  }
-
-}
 
 
 
-
-
-/* Vertical alignment modifiers.
+/* Vertical alignment modifiers
    ========================================================================== */
 
 /**
@@ -198,10 +197,39 @@ $inuit-use-markup-fix: false !default;
 }
 
 
+/**
+ * Stretch all grid items of each row to have an equal-height.
+ * Please be aware that this modifier class doesn’t take any effect in IE9 and
+ * below and other older browsers due to the lack of `display: flex` support.
+ */
+
+.o-layout--stretch {
+  display: flex;
+  flex-wrap: wrap;
+
+  > .o-layout__item {
+    display: flex;
+  }
+
+  &.o-layout--center {
+    justify-content: center;
+  }
+
+  &.o-layout--right {
+    justify-content: flex-end;
+  }
+
+  &.o-layout--left {
+    justify-content: flex-start;
+  }
+
+}
 
 
 
-/* Fill order modifiers.
+
+
+/* Fill order modifiers
    ========================================================================== */
 
 /**
@@ -233,6 +261,21 @@ $inuit-use-markup-fix: false !default;
 
 
 /**
+ * Fill up the layout system from the left-hand side. This will likely only be
+ * needed when using in conjunction with `.o-layout--reverse`.
+ */
+
+.o-layout--left {
+  text-align: left;
+
+  > .o-layout__item {
+    text-align: left;
+  }
+
+}
+
+
+/**
  * Reverse the rendered order of the grid system.
  */
 
@@ -241,7 +284,25 @@ $inuit-use-markup-fix: false !default;
 
   > .o-layout__item {
     direction: ltr;
-    text-align: left;
+  }
+
+}
+
+
+
+
+
+/* Auto-widths modifier
+   ========================================================================== */
+
+/**
+ * Cause layout items to take up a non-explicit amount of width.
+ */
+
+.o-layout--auto {
+
+  > .o-layout__item {
+    width: auto;
   }
 
 }
